@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20 so nguyen to dau tien</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(n) {
+        if (n < 2) return false;
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function checking() {
+        let i = 2;
+        let count = 0;
+        let num = Number(prompt("vui long nhap so!"));
+        let result = "";
+        do {
+          if (isPrime(i)) {
+            result += i + "<br>";
+            count++;
+          }
+          i++;
+        } while (count < num);
+        document.write(result);
+      }
+      checking();
+    </script>
+  </body>
+</html>
